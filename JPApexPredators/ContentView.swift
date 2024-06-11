@@ -12,16 +12,11 @@ struct ContentView: View {
     let predators = Predators()
     
     @State var searchText: String = ""
+    @State var isAlphabetical = false
     
     var filteredDinos: [ApexPredator] {
-        if searchText.isEmpty {
-            return predators.apexPredators
-        }
-        else{
-            return predators.apexPredators.filter { predator in
-                predator.name.localizedStandardContains(searchText)
-            }
-        }
+        predators.sort(byAlpha: isAlphabetical)
+        return predators.search(for: searchText)
     }
     
     var body: some View {
@@ -58,6 +53,16 @@ struct ContentView: View {
             .searchable(text: $searchText)
             .autocorrectionDisabled()
             .animation(.default, value: searchText)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        isAlphabetical.toggle()
+                    } label: {
+                        Image(systemName: isAlphabetical ? "film" : "textformat")
+                            .symbolEffect(.bounce, value: isAlphabetical)
+                    }
+                }
+            }
         }
         .preferredColorScheme(.dark)
     }
