@@ -13,8 +13,10 @@ struct ContentView: View {
     
     @State var searchText: String = ""
     @State var isAlphabetical = false
+    @State var currentSelection = PredatorType.all
     
     var filteredDinos: [ApexPredator] {
+        predators.filter(by: currentSelection)
         predators.sort(byAlpha: isAlphabetical)
         return predators.search(for: searchText)
     }
@@ -53,6 +55,7 @@ struct ContentView: View {
             .searchable(text: $searchText)
             .autocorrectionDisabled()
             .animation(.default, value: searchText)
+            .animation(.default, value: currentSelection)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -60,6 +63,18 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: isAlphabetical ? "film" : "textformat")
                             .symbolEffect(.bounce, value: isAlphabetical)
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Picker("Filter", selection: $currentSelection) {
+                            ForEach(PredatorType.allCases) { type in
+                                Label(type.rawValue.capitalized, systemImage: type.icon)
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
                     }
                 }
             }
