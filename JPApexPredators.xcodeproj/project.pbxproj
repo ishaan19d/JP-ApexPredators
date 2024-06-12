@@ -15,6 +15,7 @@
 		4C5D7ABD2C1767A5008A180C /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D7ABC2C1767A5008A180C /* ApexPredator.swift */; };
 		4C5D7ABF2C177412008A180C /* Predators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D7ABE2C177412008A180C /* Predators.swift */; };
 		4C77BCC72C1993F5006D6EC0 /* PredatorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C77BCC62C1993F5006D6EC0 /* PredatorDetail.swift */; };
+		4C77BCC92C1A1097006D6EC0 /* PredatorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C77BCC82C1A1097006D6EC0 /* PredatorMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4C5D7ABC2C1767A5008A180C /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
 		4C5D7ABE2C177412008A180C /* Predators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predators.swift; sourceTree = "<group>"; };
 		4C77BCC62C1993F5006D6EC0 /* PredatorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetail.swift; sourceTree = "<group>"; };
+		4C77BCC82C1A1097006D6EC0 /* PredatorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				4C5D7AAC2C17638F008A180C /* JPApexPredatorsApp.swift */,
 				4C5D7AAE2C17638F008A180C /* ContentView.swift */,
+				4C77BCC82C1A1097006D6EC0 /* PredatorMap.swift */,
 				4C77BCC62C1993F5006D6EC0 /* PredatorDetail.swift */,
 				4C5D7ABC2C1767A5008A180C /* ApexPredator.swift */,
 				4C5D7ABE2C177412008A180C /* Predators.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5D7ABD2C1767A5008A180C /* ApexPredator.swift in Sources */,
+				4C77BCC92C1A1097006D6EC0 /* PredatorMap.swift in Sources */,
 				4C5D7AAF2C17638F008A180C /* ContentView.swift in Sources */,
 				4C77BCC72C1993F5006D6EC0 /* PredatorDetail.swift in Sources */,
 				4C5D7ABF2C177412008A180C /* Predators.swift in Sources */,
